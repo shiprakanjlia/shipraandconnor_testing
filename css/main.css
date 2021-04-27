@@ -1,39 +1,140 @@
 body {
-  font-family: "Dosis", sans-serif; }
+  font-family: "Dosis", sans-serif;
+background-color:#000F1C; }
 
 /* Home Page Style */
 .ww-home-page {
-  background: url("../images/home-img.jpg") no-repeat center center;
-  background-size: cover;
-  background-position: 70%;
-  height: 100vh;
-  min-height: 480px;
-  max-height: 1080px; }
+  /*background: url("../images/wedding_website_video.mp4") no-repeat center center; */
+  /*background-size: cover;
+  background-position: 70%;*/
+  /*height: 100vh;*/
+  /*min-height: 480px;
+  max-height: 3000px;*/ }
   .ww-home-page .ww-wedding-announcement {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-    height: 100%;
+    /*width: 100%;*/
+    /*max-width: 1600px;*/
+    /*margin: 0 auto;
+    height: 100%;*/
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     letter-spacing: 2px; }
     .ww-home-page .ww-wedding-announcement .ww-announcement-container {
-      max-width: 600px;
+      /*max-width: auto;*/
       text-align: center;
       margin-left: 0;
       z-index: 999; }
     .ww-home-page .ww-wedding-announcement img {
-      max-height: 350px;
-      width: auto; }
-      @media (max-width: 480px) {
+      /*max-height: 350px;
+      width: auto;*/ }
+      @media (max-width: 1000px) {
         .ww-home-page .ww-wedding-announcement img {
-          max-height: 250px;
-          width: auto; } }
+          /*max-height: 500px;
+          width: auto;*/ } }
     .ww-home-page .ww-wedding-announcement .ww-couple-name {
       font-size: 70px; }
-      @media (max-width: 576px) {
+      @media (max-width: 1000px) {
         .ww-home-page .ww-wedding-announcement .ww-couple-name {
           font-size: 50px; } }
+
+.image1 {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+    margin-top: 0rem;
+}
+
+.image2 {
+  /*position: absolute;
+  top: 280px;
+  left:70px;  previous overlay method */
+    
+/* new overlay method https://stackoverflow.com/questions/50274708/responsive-squared-images-with-overlapping-one-in-the-middle   */
+    
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+} 
+
+.image_left {
+  /*position: relative;*/
+    position: absolute;
+  /*display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+    
+    left: -40%;
+  top: 30%;
+    transform: rotate(25deg) translate(-40%,0%);
+    
+  /*transform: translate(100%, 0%); /*need to do this otherwise the image gets lower according to how low the nav bar is */
+    overflow:hidden;
+    
+}
+
+.image_right {
+  /*position: relative;*/
+    position: absolute;
+  /*display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+    
+    
+    left:100%;
+  top: -20%;
+    transform: rotate(-25deg) scaleX(-1) translate(0%,0%);
+    
+  /*transform: translate(100%, 0%); /*need to do this otherwise the image gets lower according to how low the nav bar is */
+    overflow:hidden;
+}
+
+/* new overlay method https://stackoverflow.com/questions/50274708/responsive-squared-images-with-overlapping-one-in-the-middle   */
+.main_container_1 {
+  position: absolute;
+  width: 100%;
+  /*height: 600px;*/
+  background-color: lime;
+  margin: 0px;
+  padding: 0px;
+}
+
+.row_1 {
+  width: 100%;
+  /*padding-top: 50%;*/
+  background-color: yellow;
+  position: relative;
+}
+
+.image_cell_1 {
+  width: 110%;
+  /*height: 100%;*/
+  position: absolute;
+  top: 0;
+}
+
+.image_cell_1 img {
+  width: 100%;
+  height: 100%
+}
+
+.text-cell_1 {
+  position: relative;
+  /*background: white;*/
+  left: 50%;
+  top: 0%;
+  width:100%;
+  transform: translate(-50%, -120%);
+}
+
+
+
+
+
+
+
+
+
 
 .ww-home-page:before {
   content: "";
@@ -49,9 +150,9 @@ body {
 
 /* Nav Bar Style */
 .ww-nav-bar .heart {
-  fill: #f26147;
+  fill: #f5f3ed;
   position: relative;
-  top: 2px;
+  top: 0px;
   width: 40px;
   -webkit-animation: pulse 1s ease infinite;
           animation: pulse 1s ease infinite; }
@@ -73,8 +174,8 @@ body {
     transform: scale(1); } }
 
 .ww-nav-bar .nav-item {
-  font-size: 18px;
-  padding: 5px 0 5px 16px;
+  font-size: 24px;
+  /*padding: 5px 0 5px 16px;*/
   font-weight: 500; }
 
 /* Wedding Event Style */
@@ -125,7 +226,7 @@ body {
   /*background: url("../images/rsvp-img.jpg") no-repeat center center;*/
     
     /*sk adding */
-    background-color:#2E2E2E; 
+    background-color:#000F1C; 
     
     
   background-size: cover;
@@ -160,7 +261,7 @@ body {
 
 .ww-rsvp-detail:before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0); /*the last value here was previous 0.3 which is why I think this section was slightly different color -sk */
   width: 100%;
   height: 100%;
   position: absolute;
@@ -184,7 +285,11 @@ font-family: "Lao MN";
 color:#E5CA6C}
 
 .ww-section {
-  padding: 100px 0; }
+    /*sk added*/
+    background-color:#000F1C;
+    
+    padding: 5rem;
+  /*padding: 100px 0;*/ }
 
 .btn-primary {
   /* color: #fff; */
