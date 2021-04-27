@@ -1,0 +1,299 @@
+body {
+  font-family: "Dosis", sans-serif;
+background-color:#000F1C; }
+
+/* Home Page Style */
+.ww-home-page {
+  /*background: url("../images/wedding_website_video.mp4") no-repeat center center; */
+  /*background-size: cover;
+  background-position: 70%;*/
+  /*height: 100vh;*/
+  /*min-height: 480px;
+  max-height: 3000px;*/ }
+  .ww-home-page .ww-wedding-announcement {
+    /*width: 100%;*/
+    /*max-width: 1600px;*/
+    /*margin: 0 auto;
+    height: 100%;*/
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px; }
+    .ww-home-page .ww-wedding-announcement .ww-announcement-container {
+      /*max-width: auto;*/
+      text-align: center;
+      margin-left: 0;
+      z-index: 999; }
+    .ww-home-page .ww-wedding-announcement img {
+      /*max-height: 350px;
+      width: auto;*/ }
+      @media (max-width: 1000px) {
+        .ww-home-page .ww-wedding-announcement img {
+          /*max-height: 500px;
+          width: auto;*/ } }
+    .ww-home-page .ww-wedding-announcement .ww-couple-name {
+      font-size: 70px; }
+      @media (max-width: 1000px) {
+        .ww-home-page .ww-wedding-announcement .ww-couple-name {
+          font-size: 50px; } }
+
+.image1 {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+    margin-top: 0rem;
+}
+
+.image2 {
+  /*position: absolute;
+  top: 280px;
+  left:70px;  previous overlay method */
+    
+/* new overlay method https://stackoverflow.com/questions/50274708/responsive-squared-images-with-overlapping-one-in-the-middle   */
+    
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+} 
+
+.image_left {
+  /*position: relative;*/
+    position: absolute;
+  /*display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+    
+    left: -40%;
+  top: 30%;
+    transform: rotate(25deg) translate(-40%,0%);
+    
+  /*transform: translate(100%, 0%); /*need to do this otherwise the image gets lower according to how low the nav bar is */
+    overflow:hidden;
+    
+}
+
+.image_right {
+  /*position: relative;*/
+    position: absolute;
+  /*display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+    
+    
+    left:100%;
+  top: -20%;
+    transform: rotate(-25deg) scaleX(-1) translate(0%,0%);
+    
+  /*transform: translate(100%, 0%); /*need to do this otherwise the image gets lower according to how low the nav bar is */
+    overflow:hidden;
+}
+
+/* new overlay method https://stackoverflow.com/questions/50274708/responsive-squared-images-with-overlapping-one-in-the-middle   */
+.main_container_1 {
+  position: absolute;
+  width: 100%;
+  /*height: 600px;*/
+  background-color: lime;
+  margin: 0px;
+  padding: 0px;
+}
+
+.row_1 {
+  width: 100%;
+  /*padding-top: 50%;*/
+  background-color: yellow;
+  position: relative;
+}
+
+.image_cell_1 {
+  width: 110%;
+  /*height: 100%;*/
+  position: absolute;
+  top: 0;
+}
+
+.image_cell_1 img {
+  width: 100%;
+  height: 100%
+}
+
+.text-cell_1 {
+  position: relative;
+  /*background: white;*/
+  left: 50%;
+  top: 0%;
+  width:100%;
+  transform: translate(-50%, -120%);
+}
+
+
+
+
+
+
+
+
+
+
+.ww-home-page:before {
+  content: "";
+  background-color: rgba(245, 138, 119, 0); 
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  min-height: 480px;
+  max-height: 1080px;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+/* Nav Bar Style */
+.ww-nav-bar .heart {
+  fill: #f5f3ed;
+  position: relative;
+  top: 0px;
+  width: 40px;
+  -webkit-animation: pulse 1s ease infinite;
+          animation: pulse 1s ease infinite; }
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }
+
+.ww-nav-bar .nav-item {
+  font-size: 24px;
+  /*padding: 5px 0 5px 16px;*/
+  font-weight: 500; }
+
+/* Wedding Event Style */
+.ww-wedding-event ul {
+  list-style: none;
+  padding-left: 0; }
+
+/* Couple Friends Style  */
+.ww-couple-friends .carousel {
+  padding: 40px 0; }
+
+.ww-couple-friends .carousel-indicators {
+  bottom: 0px; }
+  .ww-couple-friends .carousel-indicators li {
+    background-color: #6c757d; }
+  .ww-couple-friends .carousel-indicators .active {
+    background-color: #f58a77; }
+
+/* Photo Gallery Style */
+.ww-photo-gallery .ww-category-filter a {
+  display: inline-block;
+  margin: 0 10px 6px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px; }
+
+.ww-photo-gallery .ww-gallery {
+  min-height: 500px; }
+
+.ww-photo-gallery .card-columns .card {
+  border: none;
+  margin-bottom: 15px;
+  border-radius: none; }
+
+@media (max-width: 992px) {
+  .ww-photo-gallery .card-columns {
+    -moz-column-count: 2;
+         column-count: 2; } }
+
+@media (max-width: 576px) {
+  .ww-photo-gallery .card-columns {
+    -moz-column-count: 1;
+         column-count: 1; } }
+
+/* RSVP Style */
+.ww-rsvp-detail {
+  /*background: url("../images/rsvp-img.jpg") no-repeat center center;*/
+    
+    /*sk adding */
+    background-color:#000F1C; 
+    
+    
+  background-size: cover;
+  min-height: 500px;
+  position: relative; }
+  .ww-rsvp-detail .ww-rsvp-form {
+    padding-left: 20%; }
+    @media (max-width: 768px) {
+      .ww-rsvp-detail .ww-rsvp-form {
+        padding-left: 10%; } }
+    @media (max-width: 576px) {
+      .ww-rsvp-detail .ww-rsvp-form {
+        padding-left: 0%; } }
+    .ww-rsvp-detail .ww-rsvp-form .form-control {
+      background-color: rgba(222, 222, 222, 0.2);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.6); }
+    .ww-rsvp-detail .ww-rsvp-form .form-control::-moz-placeholder {
+      color: #dedede; }
+    .ww-rsvp-detail .ww-rsvp-form .form-control:-ms-input-placeholder {
+      color: #dedede; }
+    .ww-rsvp-detail .ww-rsvp-form .form-control::placeholder {
+      color: #dedede; }
+    .ww-rsvp-detail .ww-rsvp-form select.form-control option {
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff; }
+    .ww-rsvp-detail .ww-rsvp-form .btn-submit {
+      /*background-color: rgba(245, 138, 119, 0.8);*/
+        background-color: #E5CA6C;
+      padding: 0.45rem 1.5rem;
+      border: 0; }
+
+.ww-rsvp-detail:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0); /*the last value here was previous 0.3 which is why I think this section was slightly different color -sk */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+/* Footer Style */
+.ww-footer a.credit {
+    
+    
+  color: inherit;
+  border-bottom: 1px dashed;
+  text-decoration: none;
+  cursor: pointer; }
+
+/* Common Style */
+.ww-title {
+    /* sk modified */
+  /*font-family: "Great Vibes", cursive*/;
+font-family: "Lao MN"; 
+color:#E5CA6C}
+
+.ww-section {
+    /*sk added*/
+    background-color:#000F1C;
+    
+    padding: 5rem;
+  /*padding: 100px 0;*/ }
+
+.btn-primary {
+  /* color: #fff; */
+color:#E5CA6C}
+
+.btn-outline-primary:hover {
+  color: #fff; }
